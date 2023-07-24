@@ -3,12 +3,16 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.4.
 
 
-#Capture
+## Capture
 
-
+------ Home ------
 ![api-PKEMON-1](https://github.com/alexcas20/Api-Pokemon/assets/102688836/0fecdc78-abf6-4dd7-87cd-e3b765c26f93)
 
+------ Search ------
 ![API-POKEMON-2](https://github.com/alexcas20/Api-Pokemon/assets/102688836/7b8cf055-03d3-42a4-8359-5504b539d45b)
+
+------ Filter ------
+![api-pokemon-3](https://github.com/alexcas20/Api-Pokemon/assets/102688836/5fbd00ef-b1b9-48a8-a0d2-28c7d24c2a1b)
 
 
 ## Development server
