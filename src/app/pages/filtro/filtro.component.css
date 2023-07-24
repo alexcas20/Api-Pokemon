@@ -101,10 +101,13 @@
     font-size: 1.5rem;
 }
 
+.imagen-espera{
+    width: 100vw;
+}
 
 .imagen-espera img{
     margin: 2rem 0;
-    width: 50%;
+    width: 30%
 }
 
 

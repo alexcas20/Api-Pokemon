@@ -22,37 +22,50 @@
 
      <!-- //Paginacion -->
 
-<div class="col mt-4">
+     <div class="container">
+        <div class="row">
+            <div class="col mt-4">
 
 
- <div class="  pagination" *ngIf="!loading && arregloFiltro.length > 0" >
-    <pagination-controls (pageChange)="page = $event"   previousLabel="Prev"
-    nextLabel="Next">
-</pagination-controls>
+                <div class="  pagination" *ngIf="!loading && arregloFiltro.length > 0" >
+                   <pagination-controls (pageChange)="page = $event"   previousLabel="Prev"
+                   nextLabel="Next">
+               </pagination-controls>
+               
+               </div>
+               </div>
+        </div>
+     </div>
 
-</div>
 
 
 
 
 
 <!-- Spinner -->
-<div class="container-fluid d-flex justify-content-center mt-5 mb-5" *ngIf="loading">
-    <div class="spinner-grow text-danger" role="status">
-        <span class="visually-hidden">Loading...</span>
-      </div>
-      <div class="spinner-grow text-danger" role="status">
-        <span class="visually-hidden">Loading...</span>
-      </div>
-      <div class="spinner-grow text-danger" role="status">
-        <span class="visually-hidden">Loading...</span>
-      </div>
+<div class="container " *ngIf="loading">
+    <div class="row d-flex justify-content-center mt-5 mb-5">
+        <div class="spinner-grow text-danger" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow text-danger" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow text-danger" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+    </div>
+    
 </div>
 
-
-<div class="imagen-espera d-flex justify-content-center" *ngIf="!loading && arregloFiltro.length <= 0 ">
-    <img src="../../../assets/img/Snorlax-sleep.png"  class="img-fluid" alt="">
+<div class="container">
+    <div class="row">
+        <div class="imagen-espera d-flex justify-content-center" *ngIf="!loading && arregloFiltro.length <= 0 ">
+            <img src="../../../assets/img/Snorlax-sleep.png"  class="img-fluid" alt="">
+        </div>
+    </div>
 </div>
+
 
   
 
@@ -100,7 +113,7 @@
 </div>
 
             
-        </div>
+       
         
 
        

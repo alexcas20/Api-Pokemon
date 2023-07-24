@@ -1,23 +1,25 @@
 
 
-
-<div class="row container-busqueda" *ngIf="!busqueda">
-    <div class="col-md-8 col-lg-4 col-sm-8">
-        <div class="input-group mb-3 p-3">
-            <input type="text" class="form-control" 
-             [(ngModel)]="input" placeholder="Search" (keydown)="buscarTeclado($event)">
-            <button class="btn btn-danger" type="submit"  (click)="buscar()">Go</button>
-          </div>
-        
+<div class="container">
+    <div class="row container-busqueda" *ngIf="!busqueda">
+        <div class="col-md-8 col-lg-4 col-sm-8">
+            <div class="input-group mb-3 p-3">
+                <input type="text" class="form-control" 
+                 [(ngModel)]="input" placeholder="Search" (keydown)="buscarTeclado($event)">
+                <button class="btn btn-danger" type="submit"  (click)="buscar()">Go</button>
+              </div>
+            
+        </div>
     </div>
 </div>
+
 
 <div class="container d-flex justify-content-center" *ngIf="busqueda">
     <button class="btn btn-danger" (click)="refresh()">Back to Search..</button>
 </div>
 
 <!-- Spinner -->
-<div class="container-fluid d-flex justify-content-center align-items-center showMore" *ngIf="loading">
+<div class="container-fluid d-flex justify-content-center align-items-start showMore" *ngIf="loading">
     <div class="spinner-grow text-danger" role="status">
         <span class="visually-hidden">Loading...</span>
       </div>
