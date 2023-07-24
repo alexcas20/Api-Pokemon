@@ -1,0 +1,125 @@
+
+
+
+<div class="row container-busqueda" *ngIf="!busqueda">
+    <div class="col-md-8 col-lg-4 col-sm-8">
+        <div class="input-group mb-3 p-3">
+            <input type="text" class="form-control" 
+             [(ngModel)]="input" placeholder="Search" (keydown)="buscarTeclado($event)">
+            <button class="btn btn-danger" type="submit"  (click)="buscar()">Go</button>
+          </div>
+        
+    </div>
+</div>
+
+<div class="container d-flex justify-content-center" *ngIf="busqueda">
+    <button class="btn btn-danger" (click)="refresh()">Back to Search..</button>
+</div>
+
+<!-- Spinner -->
+<div class="container-fluid d-flex justify-content-center align-items-center showMore" *ngIf="loading">
+    <div class="spinner-grow text-danger" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-danger" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-danger" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+
+</div>
+
+
+<div *ngIf="!busqueda && !loading"
+ class="container container-busqueda" >
+    <div class="row">
+        <div class="col-md-6 col-lg-4 col-sm-8  mt-4"
+        *ngFor="let item of listadoPokemons | paginate: { itemsPerPage: 6, currentPage: page }">
+            <div class="card">
+                <div class="btn">
+                    <button class="btn-card"  
+                    [routerLink]="['/pages/about', item.name]"
+                    (click)="fnHayBusqueda()">Show More</button>
+                </div>
+               
+                <img [src]="item.sprites.front_default" class="card-img-top" alt="...">
+                <div class="card-title">
+                    {{item.name}}
+                </div>
+
+                <div class="card-body" *ngIf="item.base_experience !== null; else noPower">
+                    Power: <p>{{item.base_experience}}</p>
+                </div>
+                
+               
+               
+                <ng-template #noPower >
+
+                    <div class="card-body">
+                        Power: <p>¿ ?</p>
+                    </div>
+                   
+                </ng-template>
+
+                <div class="card-footer"> <span>Height: {{item.height}}</span>
+             <span> Weight: {{item.weight}}</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div *ngIf="(busqueda && dataBusqueda) && !loading"
+class="container container-card">
+    <div class="row">
+        <div class="col mt-4">
+            <div class="card">
+                <div class="btn">
+                    <button class="btn-card"  
+                    [routerLink]="['/pages/about', dataBusqueda?.name]"
+                    (click)="fnHayBusqueda()">Show More</button>
+                </div>
+                <img [src]="dataBusqueda?.sprites?.front_default" class="card-img-top" alt="...">
+                <div class="card-title">
+                    {{dataBusqueda?.name}}
+                </div>
+    
+                <div class="card-body">
+                    Power: <p>{{dataBusqueda?.base_experience}}</p>
+                </div>
+                <div class="card-footer"> <span>Height: {{dataBusqueda?.height}}</span>
+             <span> Weight: {{dataBusqueda?.weight}}</span></div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+
+<!-- <div class="container spinnerDiv" *ngIf="loading">
+
+    
+        <div class="spinner-border" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      
+    </div> -->
+
+
+<div class=" container pagination" *ngIf="!busqueda && !loading">
+    <pagination-controls (pageChange)="page = $event"   previousLabel="Previous"
+    nextLabel="Next"></pagination-controls>
+</div>
+
+
+
+
+
+

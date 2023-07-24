@@ -1,0 +1,108 @@
+
+
+
+
+<div class="container mt-3 mb-3">
+    <div class="title-filtro d-flex justify-content-center">
+        <h2>Select anything type of Pokemons...</h2>
+    </div>
+    
+    <div class="row ">
+        <div class=" d-flex flex-wrap align-items-center justify-content-center col  ">
+            <div class="list-group" *ngFor="let tipo of dataTipos let i = index">
+                <button type="button" class="list-group-item list-group-item-action " aria-current="true" (click)="filtrar(tipo.name)" [ngClass]="{'active' : selectedIndex == i}" (click)="setIndex(i)" >
+                  {{tipo.name}}
+                </button>
+              </div>
+        </div>
+
+    </div>
+</div>
+
+
+     <!-- //Paginacion -->
+
+<div class="col mt-4">
+
+
+ <div class="  pagination" *ngIf="!loading && arregloFiltro.length > 0" >
+    <pagination-controls (pageChange)="page = $event"   previousLabel="Prev"
+    nextLabel="Next">
+</pagination-controls>
+
+</div>
+
+
+
+
+
+<!-- Spinner -->
+<div class="container-fluid d-flex justify-content-center mt-5 mb-5" *ngIf="loading">
+    <div class="spinner-grow text-danger" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-danger" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-danger" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+</div>
+
+
+<div class="imagen-espera d-flex justify-content-center" *ngIf="!loading && arregloFiltro.length <= 0 ">
+    <img src="../../../assets/img/Snorlax-sleep.png"  class="img-fluid" alt="">
+</div>
+
+  
+
+
+
+
+
+
+<div
+ class="container container-busqueda" *ngIf="arregloFiltro" >
+    <div class="row">
+        <div class="col-md-6 col-lg-4 col-sm-8  mt-4"
+        *ngFor="let item of arregloFiltro | paginate: { itemsPerPage: 6, currentPage: page } ">
+            <div class="card">
+                <div class="btn">
+                    <button class="btn-card"  
+                    [routerLink]="['/pages/about', item.name]"
+                    >Show More</button>
+                </div>
+               
+                <img [src]="item.sprites.front_default" class="card-img-top" alt="...">
+                <div class="card-title">
+                    {{item.name}}
+                </div>
+
+                <div class="card-body" *ngIf="item.base_experience !== null; else noPower">
+                    Power: <p>{{item.base_experience}}</p>
+                </div>
+                
+               
+               
+                <ng-template #noPower >
+
+                    <div class="card-body">
+                        Power: <p>¿ ?</p>
+                    </div>
+                   
+                </ng-template>
+
+                <div class="card-footer"> <span>Height: {{item.height}}</span>
+             <span> Weight: {{item.weight}}</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+            
+        </div>
+        
+
+       
+
+

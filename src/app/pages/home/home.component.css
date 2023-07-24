@@ -1,0 +1,21 @@
+body{
+    
+    min-height: 100vh;
+    max-width: 400px;
+    background-color: papayawhip; 
+    margin: 0 auto;
+}
+
+h2{
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+img{
+    max-width: 250px;
+}

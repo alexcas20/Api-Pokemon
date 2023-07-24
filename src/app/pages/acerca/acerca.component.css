@@ -1,0 +1,151 @@
+
+.container{
+    margin: 2rem 0 2rem 0;
+    animation: fadeIn 1s;
+}
+.card{
+   
+    background-color: #212529;
+    color: white;
+    margin: 0 0 1rem 0;
+    box-shadow: 2px 2px 20px #212529 ;
+    height: 680px;
+ 
+}
+
+.card-img-top{
+    margin: -5rem 0;
+    width: 250px;
+}
+
+
+.card-title{
+    text-align: center;
+    color: #FA6221;
+    font-size: 2rem;
+    margin: -3rem 0 4rem 0;
+}
+
+.card-body{
+    text-align: center;
+}
+.card-body b{
+    font-size: 2rem;
+}
+
+.card-body p{
+    font-size: 3rem;
+    color: #FA6221;
+}
+
+.card-footer{
+    background-color: #FA6221;
+    height: 100px;
+}
+
+
+.card-footer ul{
+  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+list-style-type: none;
+}
+
+.container-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-card .card{
+    width: 100px;
+    margin: 2rem 0 ;
+}
+
+
+
+.abilities h2{
+  
+    font-size: 2rem;
+    text-align: center;
+    margin: 0 0 .5rem 0;
+}
+
+
+
+
+ul li {
+    color: #ffff;
+    font-size: 1.2rem;
+   
+}
+
+.moves h2{
+    margin: 3rem 0 .5rem 0;
+    font-size: 2rem;
+}
+
+
+
+.moves ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.moves ul{
+    list-style-type: none;
+}
+
+
+
+.id{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.id span{
+    background-color: #FA6221;
+    margin: .5rem;
+    padding: 1rem;
+    border-radius: 0 0 1rem 1rem;
+    font-size: 2rem;
+}
+
+.divButton{
+    display: flex;
+    justify-content: center;
+}
+
+.divButton button{
+    width: 10rem;
+    padding: 1rem;
+    font-size: 1rem;
+    margin: 0 .5rem 0 0;
+}
+
+
+
+
+.material-icons{
+    padding: 0 .5rem 0 0;
+}
+
+.stat{
+    color: #FA6221;
+    font-size: 2rem;
+}
+
+/* Spinner */
+
+
+.showMore{
+
+    height: 100vw;
+  
+
+
+}
+

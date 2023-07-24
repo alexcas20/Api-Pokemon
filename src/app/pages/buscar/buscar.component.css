@@ -1,0 +1,119 @@
+.card{
+    background-color: #212529;
+    color: white;
+    margin: 0 0 2rem 0;
+    box-shadow: 2px 2px 20px #212529 ;
+    min-height: 250px;
+}
+
+.card-title{
+    text-align: center;
+    color: #FA6221;
+    font-size: 1.5rem;
+}
+
+.card-body{
+    text-align: center;
+}
+.card-body b{
+    font-size: 2rem;
+}
+
+.card-body p{
+    font-size: 3rem;
+    color: #FA6221;
+}
+
+.card-footer{
+    background-color: #FA6221;
+
+}
+
+.card:hover{
+    animation: pulse;
+    animation-duration: 1.5s;
+   
+}
+
+
+
+
+.card-footer span{
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+.card-footer{
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-card .card{
+    width: 400px;
+    margin: 2rem 0 ;
+}
+
+
+
+.btn{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-card{
+    margin: 1rem .5rem;
+    background-color: #eeea13;
+    border-radius: .5rem;
+    padding: .4rem;
+  
+    
+}
+
+.container-busqueda{
+    animation: fadeIn;
+    animation-duration: 1s;
+}
+
+.btn-card:hover{
+    background-color: #ffffd5;
+    
+}
+
+/* Spinner */
+
+.showMore{
+
+    height: 100vw;
+    
+
+
+}
+
+/* Pagination */
+
+.pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container-busqueda{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+
+
+
+
