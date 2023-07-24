@@ -2,6 +2,15 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.4.
 
+
+#Capture
+
+
+![api-PKEMON-1](https://github.com/alexcas20/Api-Pokemon/assets/102688836/0fecdc78-abf6-4dd7-87cd-e3b765c26f93)
+
+![API-POKEMON-2](https://github.com/alexcas20/Api-Pokemon/assets/102688836/7b8cf055-03d3-42a4-8359-5504b539d45b)
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
