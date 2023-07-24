@@ -11,17 +11,17 @@ export class InicioComponent implements OnInit {
     {
       name: 'pikachu',
       img: './assets/img/pikachu.webp',
-      info: 'Audaz y veloz'
+      info: 'Fast'
     },
     {
       name: 'eevee',
       img: './assets/img/eevee.png',
-      info: 'Rapido y tierno'
+      info: 'Gentle '
     },
     {
       name: 'squirtle',
       img: './assets/img/squirtle.png',
-      info: 'Guapo'
+      info: 'Handsome'
     }
   
   ]
