@@ -28,7 +28,7 @@ export class AcercaComponent implements OnInit {
 
    
     const name = this.route.snapshot.paramMap.get('name');
-    (name);
+  
     this.loading = true;
     setTimeout(() => {
       this.api.getPokemon(name!)

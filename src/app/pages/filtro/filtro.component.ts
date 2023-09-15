@@ -90,7 +90,7 @@ export class FiltroComponent implements OnInit {
         if(p.type.name === elTipo ){
           arregloFlag.push(el);
           this.tipoFlag = p.type.name;
-          // this.arregloFiltro.push(el);
+          
           
           
         }
