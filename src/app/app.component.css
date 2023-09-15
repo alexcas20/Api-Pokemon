@@ -1,0 +1,26 @@
+
+/* Button Scroll */
+.scroll-to-top{
+    margin: 0 1rem 1rem 0;
+    position: fixed;
+    padding: 1rem;
+    border: none;
+    border-radius: 20px;
+    background-color:#FA6221;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+    z-index: 99;
+    scroll-behavior: smooth;
+    transition: all .2s ease-out;
+  }
+
+  .scroll-to-top i{
+    color: #FFFFFF;
+    font-size: 2rem;
+  }
+
+  .scroll-to-top:hover{
+    transform: scale(1.2);
+    background-color: #ee8d64;
+  }
