@@ -2,8 +2,15 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.4.
 
+## Info
+App to show and search for pokemons using the pokeapi api.
 
-## Capture
+
+## Page
+https://poke-jacs.netlify.app
+
+
+## Captures
 
 ----------------------------------------------- Home ----------------------------------------------------------------------
 
