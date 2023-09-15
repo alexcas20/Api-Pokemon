@@ -22,6 +22,21 @@ import { Component, OnInit } from '@angular/core';
       }
 
 
+      .icons i{
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 2rem 2rem 0 0;
+    transition: all .2s ease-out;
+
+  }
+
+  .icons i:hover{
+    
+    color:#212529 ;
+    transform: scale(1.3);
+  }
+
      
     
     
